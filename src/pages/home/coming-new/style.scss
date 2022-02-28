@@ -1,0 +1,114 @@
+@import '../../../styles/base';
+@import '../../../styles/mixin';
+@import '../../../styles/variables';
+@import '../../../styles/components';
+
+.new-features {
+	position: relative;
+	min-height: 100vh;
+    overflow: hidden;
+	margin-top: 30rem;
+    padding: 0 2rem;
+
+    @include for-tab-port {
+        padding: 10rem 5rem;
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 1.5;
+        letter-spacing: 0.5px;
+        color: $color-black;
+
+		@include for-desktop {
+			font-size: 3.5rem;
+		}
+    }
+
+	&__text {
+		font-family: 'Fira Sans', sans-serif;
+		font-weight: 400;
+		font-size: 1.5rem;
+		display: block;
+		color: $color-text;
+	}
+
+	&__img1 {
+		width: 12%;
+		position: absolute;
+		top: 15rem;
+		left: -14rem;
+
+		@include for-tab-port {
+			width: 15%;
+			left: -3rem;
+			top: 30rem;
+		}
+
+		@include for-desktop {
+			left: 5rem;
+		}
+	}
+	&__content {
+		position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+		display: flex;
+		width: 50%;
+
+		@include for-desktop {
+			width: 40%;
+		}
+	}
+
+	&__msg{
+		text-align: center;
+		margin-top: 10rem;
+	}
+	
+	&__msg h3 {
+		font-size: 2rem;
+		font-weight: 700;
+		font-family: 'Fira Sans', sans-serif;
+		line-height: 2;
+		margin-top: 5rem;
+		color: $color-light-text;
+
+		@include for-desktop {
+			font-size: 3rem;
+		}
+	}
+	
+	&__img2 {
+		width: 10rem;
+		position: absolute;
+		bottom: 0;
+		right: -8rem;
+
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transform-origin: left;
+		}
+
+		@include for-tab-port {
+			width: 18rem;
+			right: -10rem;
+			bottom: 1rem;
+		}
+
+		@include for-desktop {
+			right: 20rem;
+		}
+	}
+}
+
+.remove-header {
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-20rem);
+}
+

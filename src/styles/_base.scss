@@ -1,0 +1,45 @@
+@import "./variables";
+@import "./mixin";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: $color-white;
+  color: $color-text;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  transition: 0.3s ease-out;
+  overscroll-behavior: none;
+}
+
+#root {
+  max-width: 100%;
+  width: 100%;
+  transition: 0.3s ease-out;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $color-white;
+}
+
+.hide-content {
+  overflow: hidden;
+}

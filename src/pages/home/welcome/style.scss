@@ -1,0 +1,176 @@
+@import '../../../styles/base';
+@import '../../../styles/mixin';
+@import '../../../styles/variables';
+@import '../../../styles/components';
+@import '../../../styles/utilities';
+
+
+.homepage {
+    padding: 5rem 0 2rem 0;
+    min-height: 100vh;
+
+    @include for-tab-port {
+        padding: 0;
+    }
+
+    &__message {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: $color-text;
+        width: 100%;
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include for-desktop {
+            top: 60%;
+        }
+
+    }
+
+    &__title {
+        font-size: 2.6rem;
+        font-weight: 700;
+        line-height: 2;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.5px;
+
+        @include for-tab-port {
+            font-size: 4rem;
+        }
+    }
+
+    &__sub-title {
+        font-family: 'Fira Sans', sans-serif;
+        font-weight: 400;
+        font-size: 1.6rem;
+        display: block;
+        margin-top: 1rem;
+        color: $color-text;
+
+        @include for-tab-port {
+            margin-top: -1rem;
+        }
+    }
+
+    &__interactive {
+        margin-top: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 80%;
+    
+        @include for-tab-port {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 50%;
+            margin-top: 1rem;
+        }
+
+        @include for-desktop {
+            width: 25%;
+        }
+
+    }
+
+    &__video {
+        margin: 5rem auto;
+        display: flex;
+        width: 18%;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+
+        @include for-desktop {
+            width: 10%;
+        }
+    
+        & span {
+            font-size: 2rem;
+    
+            @include for-tab-port {
+                font-size: 1.5rem;
+            }
+        }
+    
+        & span:nth-of-type(1) {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-right: 1rem;
+        }
+    }
+}
+.wallet3 {
+    width: 8rem;
+    position: absolute;
+    left: 30%;
+    top: 80%;
+
+    @include for-tab-port {
+        left: 80%;
+        top: 20%;
+    }
+
+    @include for-desktop {
+        left: 40%;
+        top: 20%;
+    }
+}
+
+.wallet2 {
+	display: none;
+
+    @include for-tab-port {
+        display: block;
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        width: 12rem;
+    }
+
+    @include for-desktop {
+        top: 30%;
+        left: 10%;
+        width: 18rem;
+    }
+}
+
+.wallet1 {
+    display: none;
+
+    @include for-tab-port {
+        display: block;
+        position: absolute;
+        bottom: -3rem;
+        left: 60%;
+        width: 30rem;
+    }
+
+    @include for-desktop {
+        left: 78%;
+        width: 30rem;
+    }
+}
+
+
+.wallet1 img,
+.wallet2 img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+.wallet1 img {
+    transform-origin: left;
+}
+
+
+

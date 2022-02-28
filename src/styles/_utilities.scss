@@ -1,0 +1,30 @@
+.btn {
+	display: inline-block;
+	padding: 1.2rem;
+	text-decoration: none;
+	font-size: 1.5rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: var(--color-text);
+}
+
+.btn__cta {
+	background: $color-cta;
+	border-radius: 0px 30px;
+	color: $color-white;
+	padding: 1.5rem 2rem;
+	transition: background 150ms ease-in,
+	color 200ms ease-in;
+	width: 24rem;
+    margin: auto;
+    font-size: 1.4rem;
+
+    @include for-tab-port {
+		width: fit-content;
+	}
+
+    &:hover {
+        background-color: $color-text;
+        color: #fff;
+    }
+}

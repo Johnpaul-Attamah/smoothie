@@ -1,0 +1,164 @@
+@import '../../../styles/base';
+@import '../../../styles/mixin';
+@import '../../../styles/variables';
+@import '../../../styles/components';
+
+
+.features {
+    height: 100vh;
+    padding: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+
+    &-scroll__list {
+        margin-top: 10rem;
+        margin-left: 10rem;
+        display: flex;
+        flex-shrink: 0;
+        width: 250rem;
+        & span {
+            display: block;
+            font-size: 3rem;
+            width: 60rem;
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10rem;
+    }
+
+    &__msg {
+        width: 30%;
+        flex-basis: 30%;
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 1.5;
+        letter-spacing: 0.5px;
+        color: $color-black;
+
+        @include for-desktop {
+            font-size: 3.5rem;
+        }
+    }
+
+    &__text {
+        font-family: 'Fira Sans', sans-serif;
+        font-weight: 400;
+        font-size: 1.5rem;
+        display: block;
+        color: $color-text;
+    }
+
+    &__img {
+        flex-basis: 60%;
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+
+        & .img-two {
+            align-self: flex-end;
+        }
+    }
+}
+
+// .features {
+//     // background-color: yellow;
+//     height: 100vh;
+//     display: flex;
+//     overflow: hidden;
+//     padding: 5rem;
+    
+//     &-scroll__list {
+//         flex-shrink: 0;
+//         width: 250rem;
+//         padding: 5rem 2rem;
+//         display: flex;
+//         align-items: center;
+    
+//         &-item {
+//         display: inline-block;
+//         font-size: 3rem;
+//         width: 60rem;
+//         }
+//     }
+
+//     &__msg {
+//         width: 100%;
+//         flex-basis: 100%;
+
+//         @include for-tab-port {
+//             width: 50%;
+//             flex-basis: 50%;
+//         }
+
+//         @include for-desktop {
+//             width: 30%;
+//             flex-basis: 30%;
+//         }
+//     }
+
+//     &__title {
+//         font-size: 2.5rem;
+//         font-weight: 700;
+//         line-height: 1.5;
+//         letter-spacing: 0.5px;
+//         color: $color-black;
+
+// 		@include for-desktop {
+// 			font-size: 3.5rem;
+// 		}
+//     }
+
+//     &__text {
+// 		font-family: 'Fira Sans', sans-serif;
+// 		font-weight: 400;
+// 		font-size: 1.5rem;
+// 		display: block;
+// 		color: $color-text;
+// 	}
+
+
+//     &__img {
+//         margin-left: auto;
+//         width: 60%;
+//         flex-basis: 60%;
+//         display: flex;
+//         justify-content: space-between;
+
+//         @include for-tab-port {
+//             width: 40%;
+//             flex-basis: 40%;
+//         }
+
+//         @include for-desktop {
+//             width: 60%;
+//             flex-basis: 60%;
+//         }
+//     }
+// }
+
+// .img-two {
+//     display: none;
+
+//     @include for-desktop {
+//         display: block;
+//         align-self: center;
+//     }
+
+//     & img{
+//         opacity: 1;
+//         @include for-desktop {   
+//             opacity: 0;
+//             transition: opacity 6s ease-in;
+//         }
+//     }
+// }
+
+// .img-two > img.img2-scroll {
+//     opacity: 1;
+// }

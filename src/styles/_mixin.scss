@@ -1,0 +1,19 @@
+@mixin for-phone-land {
+    @media (min-width: 360px) { @content; }
+}
+
+@mixin for-tab-port {
+    @media (min-width: 730px) { @content; }
+}
+
+@mixin for-tab-land {
+    @media (min-width: 900px) { @content; }
+}
+
+@mixin for-desktop {
+    @media (min-width: 1200px) { @content; }
+}
+
+@mixin for-big-desktop {
+    @media (min-width: 1800px) { @content; }
+}

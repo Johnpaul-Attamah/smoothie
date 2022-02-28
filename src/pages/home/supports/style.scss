@@ -1,0 +1,143 @@
+@import '../../../styles/base';
+@import '../../../styles/mixin';
+@import '../../../styles/variables';
+@import '../../../styles/components';
+@import '../../../styles/utilities';
+
+.platforms {
+	padding: 10rem 5rem;
+    display: block;
+    min-height: 100vh;
+    position: relative;
+
+    @include for-desktop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__msg {
+        position: absolute;
+        width: 60%;
+        left: 2rem;
+        top: 20%;
+        text-align: left;
+        
+        @include for-tab-port {
+            width: 50%;
+            left: 5rem;
+            top: 28%;
+        }
+
+        @include for-desktop {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 30%;
+            flex-basis: 30%;
+            margin-left: 5rem;
+
+        }
+    }
+
+    &__img {
+        width: 80%;
+        position: absolute;
+        bottom: 5rem;
+        right: -20rem;
+        display: flex;
+        justify-content: space-between;
+
+        @include for-tab-port {
+            width: 60%;
+            right: -32rem;
+
+        }
+
+        @include for-desktop {
+            position: relative;
+            width: 50%;
+            top: 0;
+            right: 0;
+            flex-basis: 50%;
+        }
+    }
+
+    &__img img {
+        width: 100%;
+        display: block;
+        height: auto;
+        object-fit: cover;
+    }
+
+    &__img {
+        margin-left: 0;
+
+        @include for-tab-port {
+            margin-left: 5rem;
+        }
+    }
+    
+    &__img .img-two {
+        align-self: flex-end;
+    }
+    
+}
+
+.support {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	margin-top: 2rem;
+
+    @include for-tab-port {
+        width: 70%;
+        margin-top: 5rem;
+    }
+
+    & .btn {
+        width: 18rem;
+        font-size: 1.2rem;
+        margin-left: 0;
+
+        @include for-tab-port {
+            width: fit-content;
+        }
+    }
+    
+    &__content {
+        width: 100%;
+        margin-top: 2rem;
+
+        @include for-tab-port {
+            margin-top: 4rem;
+        }
+    }
+    
+    &__title {
+        font-size: 1.6rem;
+        font-weight: 500;
+        width: 100%;
+        color: $color-black;
+
+        @include for-tab-port {
+            font-size: 2rem;
+        }
+    }
+    
+    &__content div {
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+    }
+    
+    &__content span {
+        display: block;
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: $color-dark-page;
+        border-radius: 50%;
+        margin-top: 3rem;
+    }
+}

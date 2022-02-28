@@ -1,0 +1,157 @@
+@import '../../styles/base';
+@import '../../styles/mixin';
+@import '../../styles/variables';
+@import '../../styles/components';
+
+
+.footer {
+    position: relative;
+    min-height: 100vh;
+    padding: 0 2rem;
+
+    @include for-tab-port {
+        padding: 10rem 5rem;
+    }
+
+    &__content-box {
+		position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+		display: flex;
+		width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include for-tab-port {
+            width: 50%;
+        }
+
+		@include for-desktop {
+			width: 35%;
+		}
+	}
+
+    &__img-sm {
+		display: none;
+
+        & img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		@include for-desktop {
+            position: absolute;
+            display: block;
+            top: 20rem;
+			left: 10rem;
+            width: 18%;
+		}
+	}
+
+    &__img-lg {
+		display: none;
+
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		@include for-desktop {
+            position: absolute;
+            display: block;
+			right: 15rem;
+            width: 25rem;
+            bottom: 0;
+		}
+	}
+
+    &--logo {
+       width: 100%;
+       height: auto;
+       margin: auto;
+
+       &-link {
+           width: 100%;
+           display: block;
+
+           & img {
+               width: 100%;
+               height: auto;
+               object-fit: cover;
+           }
+       }
+
+       @include for-desktop {
+           width: 50%;
+       }
+    }
+
+    &__nav {
+       width: 100%;
+       margin-top: 5rem;
+    }
+
+    &__nav-list {
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: space-between;
+
+       @include for-tab-port {
+           flex-direction: row;
+           justify-content: space-between;
+        }
+    }
+
+    &__nav-link {
+        position: relative;
+        text-decoration: none;
+        color: inherit;
+        display: inline-block;
+        padding: 1.5rem 1.6rem 2rem;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        font-size: 1.2rem;
+
+        @include for-tab-port {
+            padding: .8rem 1.6rem;
+        }
+    }
+
+    &__nav-link::after {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 1.6rem;
+        right: 1.6rem;
+        height: .2rem;
+        background: currentColor;
+        transform: scaleX(0);
+        transition: transform 150ms ease-in-out;
+    }
+
+    .footer__nav-link:hover::after {
+        transform: scaleX(1);
+    }
+
+    &--copyright {
+        width: 22rem;
+        margin-top: 15rem;
+        margin-right: -3rem;
+       
+       @include for-tab-port {
+           width: 100%;
+           margin-right: 0;
+       }
+    }
+}
+
+.copyright {
+	font-size: 1.2rem;
+ }

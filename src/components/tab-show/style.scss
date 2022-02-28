@@ -1,0 +1,50 @@
+@import "../../styles/base";
+@import "../../styles/mixin";
+@import "../../styles/variables";
+@import "../../styles/components";
+
+.horizontal-scroll {
+  height: 20vh;
+
+  &__list {
+    width: 250rem;
+    height: 100%;
+    padding: 5rem 2rem;
+    display: flex;
+    align-items: center;
+
+    &-item {
+      display: inline-block;
+      font-size: 3rem;
+      width: 60rem;
+    }
+  }
+}
+
+//   &__list {
+//     overflow: hidden;
+//     height: 100%;
+//     padding: 0 2rem;
+//     width: 250rem;
+//     background-color: red;
+//     margin-left: 20rem;
+//     margin-bottom: 5rem;
+//     display: flex;
+//     justify-content: flex-start;
+//     align-items: center;
+
+//     &-item {
+//       display: block;
+//       font-size: 2rem;
+
+//       @include for-tab-port {
+//         font-size: 2rem;
+//         width: 60rem;
+//       }
+
+//       @include for-desktop {
+//         font-size: 3rem;
+//       }
+//     }
+//   }
+// }

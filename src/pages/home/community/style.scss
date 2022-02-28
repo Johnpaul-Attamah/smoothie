@@ -1,0 +1,142 @@
+@import '../../../styles/base';
+@import '../../../styles/mixin';
+@import '../../../styles/variables';
+@import '../../../styles/components';
+
+
+.community {
+    position: relative;
+    min-height: 100vh;
+    padding: 0 2rem;
+
+    @include for-tab-port {
+        padding: 10rem 5rem;
+    }
+
+    &__content-box {
+		position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+		display: flex;
+		width: 90%;
+
+        @include for-tab-port {
+            width: 50%;
+        }
+
+		@include for-desktop {
+			width: 35%;
+		}
+	}
+
+    &__title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 1.5;
+        letter-spacing: 0.5px;
+        color: $color-black;
+
+		@include for-desktop {
+			font-size: 3.5rem;
+		}
+    }
+
+    &__text {
+		font-family: 'Fira Sans', sans-serif;
+		font-weight: 400;
+		font-size: 1.5rem;
+		display: block;
+		color: $color-text;
+	}
+
+    &__img-sm {
+		display: none;
+
+        & img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		@include for-tab-port {
+            position: absolute;
+            display: block;
+			width: 20%;
+			left: -3rem;
+			top: 20rem;
+		}
+
+		@include for-desktop {
+            top: 20rem;
+			left: 10rem;
+            width: 18%;
+		}
+	}
+
+    &__msg{
+		text-align: center;
+		margin-top: 10rem;
+	}
+
+    &__img-lg {
+		display: none;
+
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+            transform-origin: left;
+		}
+
+		@include for-tab-port {
+            position: absolute;
+            display: block;
+			width: 18rem;
+			right: -12rem;
+			bottom: 0;
+		}
+
+		@include for-desktop {
+			right: 15rem;
+            width: 25rem;
+		}
+	}
+
+    &--box{
+        width: 100%;
+        margin-top: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 0 7rem;
+
+        @include for-tab-port {
+            margin-top: 5rem;
+            justify-content: space-between;
+            padding: 0;
+        }
+
+        & span {
+            display: block;
+            width: 3rem;
+            height: 3rem;
+            background-color: $color-placeholder;
+            border-radius: 3px;
+            margin-top: 2rem;
+
+            @include for-tab-port {
+                width: 5rem;
+                height: 2.5rem;
+                margin-top: 0;
+            }
+
+            &:not(:first-of-type) {
+                margin-left: 3.5rem;
+                @include for-tab-port {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}

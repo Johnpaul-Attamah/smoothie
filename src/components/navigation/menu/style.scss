@@ -1,0 +1,90 @@
+@import '../../../styles/base';
+@import '../../../styles/mixin';
+@import '../../../styles/variables';
+
+.mdw-nav__list {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: $color-placeholder;
+	flex-direction: column;
+	align-items: center;
+	padding: 15rem 0;
+	overflow: hidden;
+	visibility: hidden;
+	opacity: 0;
+	transform: translateY(-15rem);
+	transition: translate 250ms ease-in,
+	opacity 250ms ease-in;
+
+	@include for-tab-port {
+		position: relative;
+		background-color: transparent;
+		flex-direction: row;
+		align-items: stretch;
+		padding: 0;
+		margin-top: 2rem;
+		visibility: visible;
+	    opacity: 1;
+	    transform: translateY(0);
+	}
+}
+
+.mdw-nav__link {
+	position: relative;
+	text-decoration: none;
+	color: inherit;
+	display: inline-block;
+	padding: .8rem 1.6rem;
+	text-transform: uppercase;
+	letter-spacing: .2rem;
+	font-size: 2.4rem;
+	line-height: 2.9rem;
+	margin-bottom: 4rem;
+	
+
+    @include for-tab-port {
+        background: transparent;
+		font-size: 1.2rem;
+		margin-bottom: 0;
+		padding: .8rem 1.2rem;
+    }
+
+
+	&::after {
+		position: absolute;
+		content: '';
+		bottom: 0;
+		left: 1.6rem;
+		right: 1.6rem;
+		height: .2rem;
+		background: currentColor;
+		transform: scaleX(0);
+		transition: transform 150ms ease-in-out;
+	}
+
+	&:hover::after {
+		transform: scaleX(1);
+	}
+
+}
+
+span.mdw-nav__link {
+	cursor: pointer;
+	&::after{
+		display: none;
+	}
+}
+
+.open {
+	display: none;
+}
+
+.open-nav {
+	visibility: visible;
+	opacity: 1;
+	transform: translateY(0);
+}
+

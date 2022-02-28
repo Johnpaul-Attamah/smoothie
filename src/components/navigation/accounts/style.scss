@@ -1,0 +1,15 @@
+@import '../../../styles/base';
+@import '../../../styles/mixin';
+@import '../../../styles/variables';
+
+.mdw-nav__list-accounts {
+	display: flex;
+	background-color: transparent;
+    margin-right: 8rem;
+    margin-top: 3rem;
+
+    @include for-tab-port {
+        margin-right: 0;
+        align-self: stretch;
+    }
+}

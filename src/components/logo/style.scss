@@ -1,0 +1,30 @@
+@import '../../styles/base';
+@import '../../styles/mixin';
+@import '../../styles/variables';
+
+.mdw-header--logo {
+    width: 6.5rem;
+	height: auto;
+	text-align: center;
+    margin: 3.2rem 0 0 1.6rem;
+
+    @include for-tab-port {
+        margin: 4rem 0 0 2.4rem;
+    }
+
+    @include for-tab-land {
+        width: 16.9rem;
+    }
+
+    &-link {
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        & img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+}
